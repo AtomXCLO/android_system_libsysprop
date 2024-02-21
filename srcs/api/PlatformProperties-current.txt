@@ -91,7 +91,7 @@ props {
   }
   prop {
     api_name: "isProfileAshaCentralEnabled"
-    prop_name: "bluetooth.profile.asha.central.enabled"
+    prop_name: "persist.sys.fflag.override.settings_bluetooth_hearing_aid"
   }
   prop {
     api_name: "isProfileAvrcpControllerEnabled"
@@ -135,7 +135,7 @@ props {
   }
   prop {
     api_name: "isProfileHapClientEnabled"
-    prop_name: "bluetooth.profile.hap.client.enabled"
+    prop_name: "bluetooth.profile.bap.unicast.client.enabled"
   }
   prop {
     api_name: "isProfileHfpAgEnabled"
