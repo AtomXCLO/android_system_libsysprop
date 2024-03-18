@@ -65,6 +65,11 @@ props {
     prop_name: "bluetooth.hardware.power.tx_cur_ma"
   }
   prop {
+    api_name: "getLeMaxNumberOfConcurrentConnections"
+    type: UInt
+    prop_name: "bluetooth.core.le.max_number_of_concurrent_connections"
+  }
+  prop {
     api_name: "isAdapterAddressValidationEnabled"
     prop_name: "bluetooth.framework.adapter_address_validation"
   }
@@ -86,7 +91,7 @@ props {
   }
   prop {
     api_name: "isProfileAshaCentralEnabled"
-    prop_name: "bluetooth.profile.asha.central.enabled"
+    prop_name: "persist.sys.fflag.override.settings_bluetooth_hearing_aid"
   }
   prop {
     api_name: "isProfileAvrcpControllerEnabled"
@@ -130,7 +135,7 @@ props {
   }
   prop {
     api_name: "isProfileHapClientEnabled"
-    prop_name: "bluetooth.profile.hap.client.enabled"
+    prop_name: "bluetooth.profile.bap.unicast.client.enabled"
   }
   prop {
     api_name: "isProfileHfpAgEnabled"
@@ -191,6 +196,10 @@ props {
   prop {
     api_name: "isProfileVcpControllerEnabled"
     prop_name: "bluetooth.profile.vcp.controller.enabled"
+  }
+  prop {
+    api_name: "isScoManagedByAudioEnabled"
+    prop_name: "bluetooth.sco.managed_by_audio"
   }
   prop {
     api_name: "isSupportPersistedStateEnabled"
@@ -472,6 +481,14 @@ props {
     api_name: "wake_lock_timeout"
     type: Integer
     prop_name: "ro.ril.wake_lock_timeout"
+  }
+}
+props {
+  module: "android.sysprop.ThreadNetworkProperties"
+  prop {
+    api_name: "country_code"
+    type: String
+    prop_name: "threadnetwork.country_code"
   }
 }
 props {

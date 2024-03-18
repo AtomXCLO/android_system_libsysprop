@@ -279,7 +279,7 @@ prop {
     type: Boolean
     scope: Public
     access: Readonly
-    prop_name: "bluetooth.profile.asha.central.enabled"
+    prop_name: "persist.sys.fflag.override.settings_bluetooth_hearing_aid"
 }
 
 # Whether the Audio/Video Remote Control Profile (AVRCP) Controller role is enabled on this device.
@@ -379,7 +379,7 @@ prop {
     type: Boolean
     scope: Public
     access: Readonly
-    prop_name: "bluetooth.profile.hap.client.enabled"
+    prop_name: "bluetooth.profile.bap.unicast.client.enabled"
 }
 
 # Whether the Hands-Free Profile (HFP) Audio Gateway role is enabled on this device.
@@ -757,6 +757,15 @@ prop {
     prop_name: "bluetooth.core.le.vendor_capabilities.enabled"
 }
 
+# Maximum number of number of allowed concurrent LE Connections
+prop {
+    api_name: "getLeMaxNumberOfConcurrentConnections"
+    type: UInt
+    scope: Public
+    access: Readonly
+    prop_name: "bluetooth.core.le.max_number_of_concurrent_connections"
+}
+
 # list of supported HID transport protocols for IMU data over LE Audio by order of preferrence
 # Comma separated list of:
 # - "le-acl": LE ACL transport, the IMU data is reported via the sensor stack
@@ -777,4 +786,14 @@ prop {
     scope: Internal
     access: Readonly
     prop_name: "bluetooth.sco.disable_enhanced_connection"
+}
+
+# Whether Bluetooth HFP SCO managed by Audio.
+# Set by vendors overlay, read at Bluetooth initialization
+prop {
+    api_name: "isScoManagedByAudioEnabled"
+    type: Boolean
+    scope: Public
+    access: Readonly
+    prop_name: "bluetooth.sco.managed_by_audio"
 }
