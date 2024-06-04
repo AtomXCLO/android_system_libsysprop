@@ -78,6 +78,10 @@ props {
     prop_name: "bluetooth.core.gap.le.privacy.enabled"
   }
   prop {
+    api_name: "isLeAudioCodecExtensionAidlEnabled"
+    prop_name: "bluetooth.core.le_audio.codec_extension_aidl.enabled"
+  }
+  prop {
     api_name: "isLeAudioInbandRingtoneSupported"
     prop_name: "bluetooth.core.le_audio.inband_ringtone.supported"
   }
@@ -91,7 +95,8 @@ props {
   }
   prop {
     api_name: "isProfileAshaCentralEnabled"
-    prop_name: "persist.sys.fflag.override.settings_bluetooth_hearing_aid"
+    access: ReadWrite
+    prop_name: "persist.bluetooth.asha.enabled"
   }
   prop {
     api_name: "isProfileAvrcpControllerEnabled"

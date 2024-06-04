@@ -147,6 +147,14 @@ prop {
     prop_name: "bluetooth.core.le_audio.inband_ringtone.supported"
 }
 
+prop {
+    api_name: "isLeAudioCodecExtensionAidlEnabled"
+    type: Boolean
+    scope: Public
+    access: Readonly
+    prop_name: "bluetooth.core.le_audio.codec_extension_aidl.enabled"
+}
+
 # The default name of the device.
 # Set by vendors overlay, read at Bluetooth initialization
 prop {
@@ -278,8 +286,8 @@ prop {
     api_name: "isProfileAshaCentralEnabled"
     type: Boolean
     scope: Public
-    access: Readonly
-    prop_name: "persist.sys.fflag.override.settings_bluetooth_hearing_aid"
+    access: ReadWrite
+    prop_name: "persist.bluetooth.asha.enabled"
 }
 
 # Whether the Audio/Video Remote Control Profile (AVRCP) Controller role is enabled on this device.
